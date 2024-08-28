@@ -1,2 +1,0 @@
-cd client yarn start
-cd api nodemon index.js
