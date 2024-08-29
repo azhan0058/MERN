@@ -15,7 +15,7 @@ const path = require('path');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'hgdgfsetuiytytr53e97tfd4sdcf86uyg8fd56s';
 
-app.use(cors({credentials:true, origin: ["https://mern-client-seven-smoky.vercel.app"], methods: ["GET","POST","PUT"]}));
+app.use(cors({credentials:true, origin: ["https://mern-eb9j.onrender.com"], methods: ["GET","POST","PUT"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
