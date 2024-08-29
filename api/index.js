@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/'});
 const fs = require('fs');
+const path = require('path');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'hgdgfsetuiytytr53e97tfd4sdcf86uyg8fd56s';
@@ -18,6 +19,7 @@ app.use(cors({credentials:true, origin: ["https://mern-client-seven-smoky.vercel
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use(express.static(path.join(__dirname + "/public")));
 
 mongoose.connect('mongodb+srv://blog:azhan123@cluster0.brau3hg.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0');
 
